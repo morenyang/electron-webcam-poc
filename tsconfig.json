@@ -22,5 +22,5 @@
     "resolveJsonModule": true,
     "allowJs": true
   },
-  "exclude": ["app/main.js"]
+  "exclude": ["app/main.js", "app/shadow/dist", "app/ui/dist"]
 }

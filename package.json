@@ -7,11 +7,11 @@
   "private": true,
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "start:main": "cross-env NODE_ENV=development electron ./app/main.js",
-    "start:main:prod": "cross-env NODE_ENV=production electron -r ./scripts/babel-register ./app/main.ts",
+    "start:main:prod": "cross-env NODE_ENV=development electron ./app/main.js",
+    "start:main": "cross-env NODE_ENV=production electron -r ./scripts/babel-register ./app/main.ts",
     "start:shadow": "cross-env NODE_ENV=development webpack serve -c ./configs/webpack.config.shadow.renderer.js",
     "start:ui": "cross-env NODE_ENV=development webpack serve -c ./configs/webpack.config.ui.renderer.js",
-    "start:view": "concurrently \"yarn:start:ui\" \"yarn:start:shadow\" \"yarn:start:main\"",
+    "start:dev": "concurrently \"yarn:start:ui\" \"yarn:start:shadow\" \"yarn:start:main\"",
     "build:main": "cross-env NODE_ENV=production webpack -c ./configs/webpack.config.main.js",
     "build:shadow": "cross-env NODE_ENV=production webpack -c ./configs/webpack.config.shadow.renderer.js",
     "build:ui": "cross-env NODE_ENV=production webpack -c ./configs/webpack.config.ui.renderer.js"
